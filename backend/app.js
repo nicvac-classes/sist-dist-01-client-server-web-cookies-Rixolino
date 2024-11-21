@@ -28,7 +28,6 @@ app.post('/logout', (req,res) => {
     const name = req.body.name;
     res.clearCookie('name');
     res.redirect('/')
-    Object.keys(req.cookies).forEach(cookie => res.clearCookie(cookie));
 });
 
 const PORT = 3000;
